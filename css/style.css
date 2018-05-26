@@ -6,7 +6,17 @@ h4,
 h5,
 h6,
 p {
-	font-family: 'Gudea', sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.btn-primary.active {
+	box-shadow: 0 0 .2rem .2rem rgba(0,123,255,.5);
+	font-weight: bold;
+}
+
+.btn-success.active {
+	box-shadow: 0 0 .2rem .2rem rgba(40,167,69,.5);
+	font-weight: bold;
 }
 
 /* colors of pages */
@@ -36,6 +46,67 @@ p {
 
 .bg-red {
 	background-color: #ff2d11;
+}
+
+.text-shadow-black {
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+}
+
+.home-card {
+	border: 0;
+	max-width: 34rem;
+}
+
+.home-border-top {
+	border-top: 1px solid rgba(29,163,242,0.2);
+}
+
+.home-border-bottom {
+	border-bottom: 1px solid rgba(29,163,242,0.2);
+}
+
+.profit-content {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.card-deck .feature-card {
+	min-width: 250px;
+	max-width: 543px;
+	border: 0;
+	margin: 0;
+
+	padding-top: 110px;
+	background-position: center 20px;
+	background-repeat: no-repeat;
+	background-color: transparent;
+}
+
+.feature-card:hover {
+	background-color: rgba(29,163,242,0.04);
+}
+
+.feature-card h5 {
+	border-bottom: 1px solid rgba(29,163,242,0.2);
+	padding-bottom: 1rem;
+}
+
+.feature-non-profit {
+	background-image: url("../img/home/non-profit.png");
+}
+
+.feature-charity {
+	background-image: url("../img/home/charity.png");
+}
+
+.feature-low-risk {
+	background-image: url("../img/home/low-risk.png");
+}
+
+.feature-vantage {
+	background-image: url("../img/home/vantage.png");
 }
 
 .donate-card-header {
@@ -216,10 +287,7 @@ p {
 }
 
 .card-blue {
-	padding: 1.25rem;
-
 	background-color: rgba(29,163,242,0.03);
-	border-radius: .25rem;
 }
 
 @media (min-width: 576px) { 
@@ -284,6 +352,12 @@ p {
 	.home-about {
 		background-image: url("../img/home/bg_home-about768.jpg");
 		height: 400px;
+	}
+
+	.profit-content {
+
+		flex-direction: row;
+		flex-wrap: nowrap;
 	}
 
 	.donate {
@@ -400,5 +474,16 @@ p {
 
 	.webmoney-mobile {
 		display: none;
+	}
+
+	.home-card-deck {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.home-card {
+		max-width: 20rem;
 	}
 }
