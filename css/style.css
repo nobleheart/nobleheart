@@ -9,9 +9,125 @@ p {
 	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+.home-footer {
+	background-color: #0e5179;
+}
+
+.card-deck .priority-card {
+	border: 0;
+	padding-top: 1rem;
+	padding-left: 10px;
+	padding-right: 10px;
+	min-width: 250px;
+	max-width: 350px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .accordion .btn {
 	white-space: normal;
-	text-align: justify;
+}
+
+/* переключатель панелей, положение вниз */
+.accordion .collapsed:before {
+	content:'';
+	height:8px;
+	width:8px;
+	display:block;
+	border:3px solid #09669D;
+	border-right-width:0;
+	border-bottom-width: 0;
+	-ms-transform:rotate(-45deg);
+	-webkit-transform:rotate(-45deg);
+	transform:rotate(-45deg);
+	position:absolute;
+	right:15px;
+	top:30px
+}
+
+.title_block {
+	width: 100%;
+	text-align: center;
+}
+
+.title_block:before{
+	content:'';
+	height:8px;
+	width:8px;
+	display:block;
+	border:3px solid #1a9f2a;
+	border-right-width:0;
+	border-top-width:0;
+	-ms-transform:rotate(-45deg);
+	-webkit-transform:rotate(-45deg);
+	transform:rotate(-45deg);
+	position:absolute;
+	right:15px;
+	top:30px
+}
+
+.btn-group-toggle .left.active:before {
+	content:'';
+	height:8px;
+	width:8px;
+	display:block;
+	border:3px solid white;
+	border-right-width:0;
+	border-top-width:0;
+	-ms-transform:rotate(-45deg);
+	-webkit-transform:rotate(-45deg);
+	transform:rotate(-45deg);
+	position:absolute;
+	left:15px;
+	top:15px
+}
+
+.btn-group-toggle .left:before {
+	content:'';
+	height:8px;
+	width:8px;
+	display:block;
+	border:3px solid white;
+	border-left-width:0;
+	border-top-width:0;
+	-ms-transform:rotate(-45deg);
+	-webkit-transform:rotate(-45deg);
+	transform:rotate(-45deg);
+	position:absolute;
+	left:15px;
+	top:15px
+}
+
+.btn-group-toggle .right.active:before {
+	content:'';
+	height:8px;
+	width:8px;
+	display:block;
+	border:3px solid white;
+	border-right-width:0;
+	border-top-width:0;
+	-ms-transform:rotate(-45deg);
+	-webkit-transform:rotate(-45deg);
+	transform:rotate(-45deg);
+	position:absolute;
+	right:15px;
+	top:15px
+}
+
+.btn-group-toggle .right:before {
+	content:'';
+	height:8px;
+	width:8px;
+	display:block;
+	border:3px solid white;
+	border-right-width:0;
+	border-bottom-width:0;
+	-ms-transform:rotate(-45deg);
+	-webkit-transform:rotate(-45deg);
+	transform:rotate(-45deg);
+	position:absolute;
+	right:15px;
+	top:15px
 }
 
 .plans {
@@ -26,10 +142,33 @@ p {
 	padding-left: 50px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	background-image: url(../img/home/charity.png);
 	background-repeat: no-repeat;
 	background-size: 40px;
 	background-position: left center;
+}
+
+.plans .donation {
+	background-image: url(../img/home/charity.png);
+}
+
+.plans .drugs {
+	background-image: url(../img/home/drugs.png);
+}
+
+.plans .globe {
+	background-image: url(../img/home/globe.png);
+}
+
+.plans .academy {
+	background-image: url(../img/home/academy.png);
+}
+
+.plans .build {
+	background-image: url(../img/home/build.png);
+}
+
+.plans .people {
+	background-image: url(../img/home/people.png);
 }
 
 .animate-btn {
@@ -40,7 +179,7 @@ p {
     0% { background-color: #1a9f2a;}
     50% { background-color: rgba(26,159,42,0.3); }
     100% { background-color: #1a9f2a; }
-   }
+}
 
 .btn-primary.active {
 	box-shadow: 0 0 0 .2rem rgba(0,123,255,.5);
@@ -64,6 +203,10 @@ p {
 
 .text-blue {
 	color: #09669D;
+}
+
+.bg-blue-opacity {
+	background-color: rgba(29,163,242,0.05);
 }
 
 .bg-violet {
@@ -120,13 +263,13 @@ p {
 
 .feature-card:hover,
 .feature-card:focus,
-.home-card:hover,
-.home-card:focus {
-	background-color: rgba(29,163,242,0.03);
+.priority-card:hover,
+.priority-card:focus {
+	background-color: rgba(29,163,242,0.05);
 }
 
 .feature-card h5,
-.home-card .card-header {
+.priority-card .card-header {
 	border-bottom: 1px solid rgba(29,163,242,0.2);
 	padding-bottom: 1rem;
 }
@@ -267,6 +410,26 @@ p {
 	height: 42px;
 }
 
+.footer-logo {
+	max-width: 239px;
+}
+
+.footer-nav {
+	text-decoration: none;
+	color: #a5dafa;
+	margin: auto;
+	padding: 15px 15px;
+}
+
+.footer-nav:hover,
+.footer-nav:focus {
+	color: #ffffff;
+}
+
+.footer-nav:last-child {
+	padding-right: 0;
+}
+
 .figure {
 	max-width: 650px;
     border: 0;
@@ -325,7 +488,7 @@ p {
 }
 
 .card-blue {
-	background-color: rgba(29,163,242,0.03);
+	background-color: rgba(29,163,242,0.05);
 }
 
 @media (min-width: 576px) { 
@@ -470,6 +633,14 @@ p {
 		margin-right: auto;
 		margin-left: auto;
 	}
+
+	.card-deck .priority-card {
+		min-width: 340px;
+	}
+
+	.card-deck .feature-card {
+		min-width: 330px;
+	}
 }
 
 @media (min-width: 1200px) { 
@@ -523,5 +694,13 @@ p {
 
 	.home-card {
 		max-width: 20rem;
+	}
+
+	.card-deck .priority-card {
+		min-width: 250px;
+	}
+
+	.card-deck .feature-card {
+		min-width: 250px;
 	}
 }
